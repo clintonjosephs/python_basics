@@ -23,6 +23,8 @@ def validate_number(num):
         print("Only numbers and decimals allowed")
         financial_statement()
 
+def round_num(num):
+    return round(num, 2)
     
 def financial_statement():
     percentage_tracker = 100
@@ -37,14 +39,13 @@ def financial_statement():
 
     percentage_marketing = validate_number(input("(%) marketing: "))
     if percentage_marketing > percentage_tracker:
-        print("Percentage allocated for marketing should be less than or equal to " + percentage_tracker)
+        print("Percentage allocated for marketing should be less than or equal to " + str(percentage_tracker))
         financial_statement()
     
     percentage_tracker -= percentage_marketing
 
     if percentage_tracker > 0:
         percentage_operational_expenses = validate_number(input("(%) operational expenses: "))
-        percentage_tracker -= percentage_operational_expenses
 
     cost_per_customer = float(input("(ghs) What does it cost to acquire a customer: "))
 
@@ -54,9 +55,9 @@ def financial_statement():
     
     customers_aquisition_count = customer_acquisition / cost_per_customer
 
-    print("____FINANCIAL STATEMENT____ \n\n\n")
+    print("____FINANCIAL STATEMENT____ \n\n")
 
-    print(f"Marketing budget: {marketing} \n\n Operational expenses: {operational_expenses} \n\n Customer acquisition: {customer_acquisition} \n\n Number of customers to acquire: {customers_aquisition_count}")
+    print(f"Marketing budget: {round_num(marketing)} \n\n Operational expenses: {round_num(operational_expenses)} \n\n Customer acquisition: {round_num(customer_acquisition)} \n\n Number of customers to acquire: {round_num(customers_aquisition_count)}")
 
 def main():
     user = input("""Choose an operation:
