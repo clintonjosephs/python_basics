@@ -24,8 +24,14 @@ class Car():
         """Show the current speed of the car."""
         print(f"The current speed of the car is {self.speed} km/h")
 
+    def accelerate(self, direction):
+        """Accelerate the car."""
+        self.speed += 10
+        print(f"The car has accelerated to {self.speed} km/h in the {direction} direction")
+
 
 car_one = Car('red', 'BMW', 12, 'BMW', 100, 4, 2.0, 0)
 car_one.current_speed()
+car_one.accelerate('north')
 
 
