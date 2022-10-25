@@ -5,9 +5,17 @@ class Car:
     speed = 0
     mileage = 0
 
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
 class ElectricCar(Car):
     battery_size = 0
     battery_type = ''
+
+    def __init__(self, brand: str, model: str, year: int):
+        super().__init__(brand, model, year)
 
 class HybridCar(Car):
     battery_size = 0
