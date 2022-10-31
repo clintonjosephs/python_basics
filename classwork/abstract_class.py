@@ -34,10 +34,10 @@ class UserManager(UserAbstract):
         print('User created')
 
     def get_all_users(self):
-        print('All users')
+        print('hello tiny! we are getting all users here')
 
     def get_user_by_id(self, user_id):
         print('User with id: ' + str(user_id))
 
 user_manager = UserManager()
-user_manager.create_user(User())
+user_manager.get_all_users()
