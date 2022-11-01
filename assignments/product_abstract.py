@@ -47,7 +47,7 @@ class ProductAbstract(ABC):
         pass
 
 class ProductManager(ProductAbstract):
-    product = Product(0, '', '', '', 0, '0', 0.00)
+    product = {}
 
     def __init__(self, product: Product):
         self.product = product
