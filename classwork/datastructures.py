@@ -25,6 +25,7 @@ def dictionaries():
         "model": "Mustang",
         "year": 1964
     }
+    # dictionary methods are clear, copy, fromkeys, get, items, keys, pop, popitem, setdefault, update, values
     # if the below approach is used, when the key is not found, it will throw an error
     print(car_dict["brand"])
 
@@ -48,13 +49,29 @@ def dictionaries():
 
 
 def sets():
-    # Sets are used to store multiple items in a single variable. A set is a collection which is both unordered and unindexed. Sets are written with curly brackets.
+    # Sets are used to store multiple items in a single variable. 
+    # A set is a collection which is both unordered and unindexed. Sets are written with curly brackets.
     # The main difference between a list and a set is that a set cannot have duplicate items.
     my_set = {"apple", "banana", "cherry"}
+    # set methods are add, clear, copy, difference, difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, pop, remove, symmetric_difference, symmetric_difference_update, union, update
     print(my_set)
 
 def tuples():
-    # Tuples are used to store multiple items in a single variable. A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets.
+    # Tuples are used to store multiple items in a single variable. 
+    # A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets.
     # The main difference between a list and a tuple is that a list is mutable, while a tuple is immutable.
     my_tuple = ("apple", "banana", "cherry")
+    # tuple methods are count, index
+    print(type(my_tuple))
     print(my_tuple)
+
+
+def main():
+    lists()
+    dictionaries()
+    sets()
+    tuples()
+
+if __name__ == "__main__":
+    main()
+
