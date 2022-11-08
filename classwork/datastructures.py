@@ -20,12 +20,32 @@ def lists():
 
 def dictionaries():
     # Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is ordered*, changeable and does not allow duplicates.
-    my_dict = {
+    car_dict = {
         "brand": "Ford",
         "model": "Mustang",
         "year": 1964
     }
-    print(my_dict["brand"])
+    # if the below approach is used, when the key is not found, it will throw an error
+    print(car_dict["brand"])
+
+    # if the below approach is used, when the key is not found, it will return None
+    print(car_dict.get("brand", "Not found"))
+
+    car_dict["brand"] = "Toyota"
+    print(car_dict)
+
+    # array of dictionaries
+    cars = [
+        {"brand": "Toyota", "model": "Camry", "year": 2005},
+        {"brand": "Mercedies", "model": "G-Class", "year": 2022},
+        {"brand": "Honda", "model": "Accord", "year": 2008}
+    ]
+    print(cars)
+
+    # loop through the array of dictionaries and print the value from each dictionary key
+    for car in cars:
+        print(car.get("brand", "Not found"), "-" , car.get("model", "Not found"), "-" , car.get("year", "Not found"))
+
 
 def sets():
     # Sets are used to store multiple items in a single variable. A set is a collection which is both unordered and unindexed. Sets are written with curly brackets.
